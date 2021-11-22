@@ -1,3 +1,6 @@
+Este es un proyecto personal que muestra como administrar citas veterinarias para mascotas y se hace para profundizar conocimientos en ReactJs.
+Se hace Build con Netlify para que el ejemplo sea mas portable y probable por cualquier persona.
+Link para ingresar y probarlo https://silly-rosalind-9d6c54.netlify.app
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
