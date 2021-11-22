@@ -11,6 +11,8 @@ const Formulario = () => {
         sintomas: ''
     });
 
+    const [error, actualizarError] = useState(false)
+
     //funcion que se ajecuta cada que el usuario escribe en un input
     const actualizarState = e => {
         actualizarCita({
@@ -22,11 +24,36 @@ const Formulario = () => {
     //Extraer valores
     const{mascota, propietario, fecha, hora, sintomas } = cita;
 
+    //Cuando el ususarios preciona agregar cita
+    const submitCita = e => {
+        e.preventDefault();
+
+        //validar
+        if (mascota.trim() ==='' || propietario.trim() ==='' ||  fecha.trim() ==='' || hora.trim() ==='' || sintomas.trim() ==='') {
+            actualizarError(true);
+            return;
+        }
+
+        //Eliminar mensaje de error
+        actualizarError(false);
+
+        //Asignar id
+        
+
+        //Crear la cita
+
+        //Reiniciar el form
+    }
+
     return ( 
         <Fragment>
             <h2>Crear Cita</h2>
 
-            <form>
+            {error ? <p className="alerta-error">Debes llenar todos los campos</p> :  null}
+
+            <form
+                onSubmit={submitCita}
+            >
                 <label>Nombre de la Mascota</label>
                 <input 
                     type="text"
