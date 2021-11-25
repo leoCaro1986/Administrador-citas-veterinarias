@@ -11,7 +11,7 @@ function App() {
     citasIniciales =[];
   }
 
-  //Arreglo de citas
+  //Arreglo de citas creadas
   const [citas, guardarCitas] = useState(citasIniciales);
 
   //Use effect para realizar operaciones con los cambios de state
